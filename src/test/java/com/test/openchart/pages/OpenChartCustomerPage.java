@@ -66,26 +66,19 @@ public class OpenChartCustomerPage {
 
         if(newsLetter.isDisplayed()&& ! newsLetter.isSelected()&&newsLetter.isEnabled()){
 
-        JavascriptExecutor js= (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click()",newsLetter);}
+            BrowserUtils.clickWithJS(driver,newsLetter);}
 
-        //newsLetter.click();
+
+
 
        if(status.isDisplayed()&& !status.isSelected()&& status.isEnabled()){
 
-           JavascriptExecutor js= (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click()",status);}
-
-     //   status.click();
+           BrowserUtils.clickWithJS(driver,status);}
 
        if(safe.isDisplayed()&&!safe.isSelected()&& safe.isEnabled()){
-           JavascriptExecutor js= (JavascriptExecutor) driver;
+            BrowserUtils.clickWithJS(driver,safe);}
 
-        js.executeScript("arguments[0].click()",safe);}
-
-       // safe.click();
-
-        save.click();
+           save.click();
 
 
     }
